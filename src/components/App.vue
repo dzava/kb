@@ -52,6 +52,12 @@ export default {
     },
     mounted() {
         document.querySelector('input').focus()
+        document.addEventListener('keypress', (evt) => {
+            if(evt.which === 43 &&
+                ['input', 'textarea'].indexOf(evt.target.tagName.toLowerCase()) === -1) {
+                this.$router.push('new');
+            }
+        })
     }
 }
 </script>
