@@ -60,7 +60,7 @@
 
 <script>
     import AlgoliaSearch from 'algoliasearch';
-    import config from './config';
+    import config from '../config';
 
     let client = {};
     let index = {};
