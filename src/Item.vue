@@ -1,6 +1,7 @@
 <style lang="scss">
 @import "~bulma/sass/utilities/_all";
 @import "~bulma/sass/elements/content";
+@import "~highlight.js/styles/github";
 
 .content {
     box-shadow: 0 2px 3px rgba($black, 0.1), 0 0 0 1px rgba($black, 0.1);
@@ -40,6 +41,19 @@ pre code {
 
 <script>
     import marked from 'marked';
+    import highlight from 'highlight.js';
+
+    marked.setOptions({
+        highlight: function (code, lang) {
+
+            if(lang === undefined) {
+                return code;
+            }
+
+            return highlight.highlightAuto(code).value;
+        }
+    });
+
     export default {
         props: ['id', 'content'],
         methods: {
