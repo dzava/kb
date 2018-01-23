@@ -1,7 +1,4 @@
-<style lang="scss">
-@import "~bulma/sass/utilities/_all";
-@import "~bulma/sass/elements/button";
-
+<style>
 .wrapper,
 .preview {
     height: 100%;

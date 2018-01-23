@@ -1,10 +1,7 @@
-<style lang="scss">
-@import "~bulma/sass/utilities/_all";
-@import "~bulma/sass/elements/content";
-@import "~highlight.js/styles/github";
+<style>
 
 .content {
-    box-shadow: 0 2px 3px rgba($black, 0.1), 0 0 0 1px rgba($black, 0.1);
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
     padding: 1.5rem;
 }
 

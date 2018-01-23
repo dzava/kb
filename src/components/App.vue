@@ -1,6 +1,4 @@
-<style lang="scss">
-@import "~bulma/sass/utilities/_all";
-@import "~bulma/sass/elements/content";
+<style>
 
 html,
 body {
@@ -12,6 +10,10 @@ body {
 .ais-input {
     width: 100%;
     font-size: 2em;
+}
+
+.ais-powered-by {
+    text-align: right;
     margin-bottom: 1em;
 }
 
@@ -25,10 +27,13 @@ body {
         :app-id="config.appId"
         :api-key="config.searchKey"
         :index-name="config.index"
+        :query="query"
         >
 
         <ais-search-box>
             <ais-input></ais-input>
+
+            <ais-powered-by></ais-powered-by>
         </ais-search-box>
 
         <ais-results>
@@ -44,9 +49,14 @@ body {
 import config from '../config';
 
 export default {
+    props: {
+        query: {
+            type: String,
+            default: '',
+        },
+    },
     data () {
         return {
-            msg: 'Welcome to Your Vue.js App',
             config
         }
     },

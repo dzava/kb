@@ -9,7 +9,8 @@ export default new VueRouter({
     routes: [
         {
             path: '/',
-            component: App
+            component: App,
+            props: route => ({ query: route.query.q }),
         },
         {
             path: '/new',
